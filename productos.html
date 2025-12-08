@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Frozen Seafood Trading - Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Lora:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* .product-card-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-ocean);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        } */
+
+        .product-card-image {
+            width: 100%;
+            height: 200px;
+            /* background: var(--gradient-ocean); */
+            /* Remover o comentar */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* La imagen cubre todo el espacio manteniendo proporciones */
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-card-image img {
+            transform: scale(1.1);
+            /* Efecto zoom al hover */
+        }
+
+        .product-card-content {
+            padding: 2rem;
+        }
+
+        .product-card h3 {
+            color: var(--primary-ocean);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card .scientific {
+            font-style: italic;
+            color: var(--neutral-medium);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            color: var(--neutral-medium);
+            line-height: 1.6;
+        }
+
+        .products-header {
+            text-align: center;
+            padding: 8rem 5% 3rem;
+            background: var(--gradient-ocean);
+            color: white;
+            margin-top: 120px;
+        }
+
+        .products-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- <header id="navbar">
+        <div class="top-bar">
+            <div>Servicio Global de Trading de Productos del Mar Congelados</div>
+            <div>
+                <a href="mailto:info@seafoodtrading.com">info@seafoodtrading.com</a>
+                <a href="tel:+51123456789">+51 1 2345 6789</a>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-container">
+                    <a href="index-ejemplo.html" class="logo">Seafood Trading</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header> -->
+
+    <header id="header">
+        <div class="top-bar">
+            <div>
+                <span>📞 Questions? Call: 0800 800 800</span>
+            </div>
+            <div>
+                <a href="#support">Support</a>
+                <a href="#login">Login</a>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-container">
+                <!-- <div class="logo"> -->
+                <div>
+                    <img src="assets/logo3.jpg" alt="logo" class="logo-img">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="productos.html">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#why-us">Why Choose Us</a></li>
+                    <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Header -->
+    <div class="products-header">
+        <h1>Our Products</h1>
+        <p>Our premium, internationally sourced frozen seafood products</p>
+    </div>
+
+    <!-- Products Grid -->
+    <section id="products" class="products-grid">
+        <a href="calamar-gigante.html" class="product-card">
+            <!-- <div class="product-card-image">🦑</div> -->
+            <div class="product-card-image">
+                <img src="images/giant-squid_-dosidicus-_gigas.jpg" alt="calamar gigante">
+            </div>
+            </div>
+            <div class="product-card-content">
+                <h3>Calamar Gigante</h3>
+                <p class="scientific">Dosidicus gigas</p>
+                <p>One of our most popular products. Fillets, tentacles, and more shapes available.</p>
+                <p style="margin-top: 1rem;"><strong>~27 ton/contenedor</strong></p>
+            </div>
+        </a>
+
+        <a href="calamar-illex.html" class="product-card">
+            <div class="product-card-image">
+                <img src="images/illex-argentinus.jpg" alt="calamar illex">
+
+            </div>
+            <div class="product-card-content">
+                <h3>Calamar Illex</h3>
+                <p class="scientific">Illex argentinus</p>
+                <p>A highly sought-after species in international markets. Available in multiple product forms.</p>
+                <p style="margin-top: 1rem;"><strong>~25 ton/contenedor</strong></p>
+            </div>
+        </a>
+
+        <a href="pulpo.html" class="product-card">
+            <div class="product-card-image">🐙</div>
+            <div class="product-card-content">
+                <h3>Pulpo</h3>
+                <p class="scientific">Octopus vulgaris</p>
+                <p>Premium multi-species octopus. Whole cleaned, tentacles, and more options.</p>
+                <p style="margin-top: 1rem;"><strong>~24-26 ton/contenedor</strong></p>
+            </div>
+        </a>
+
+        <a href="pejerrey.html" class="product-card">
+            <div class="product-card-image">🐟</div>
+            <div class="product-card-content">
+                <h3>Pejerrey</h3>
+                <p class="scientific">&nbsp;</p>
+                <p>Producto popular en varios mercados. Disponibilidad según condiciones de mercado.</p>
+                <p style="margin-top: 1rem;"><strong>~20 ton/contenedor</strong></p>
+            </div>
+        </a>
+
+        <a href="jurel.html" class="product-card">
+            <div class="product-card-image">🐟</div>
+            <div class="product-card-content">
+                <h3>Jurel</h3>
+                <p class="scientific">&nbsp;</p>
+                <p>Especie versátil y popular. Ideal para procesamiento, conservas y más.</p>
+                <p style="margin-top: 1rem;"><strong>~27 ton/contenedor</strong></p>
+            </div>
+        </a>
+
+        <a href="caballa-pacifico.html" class="product-card">
+            <div class="product-card-image">🐟</div>
+            <div class="product-card-content">
+                <h3>Caballa del Pacífico</h3>
+                <p class="scientific">&nbsp;</p>
+                <p>Especie valiosa para diversas aplicaciones. Múltiples formas disponibles.</p>
+                <p style="margin-top: 1rem;"><strong>~27 ton/contenedor</strong></p>
+            </div>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Sobre Nosotros</h4>
+                <p>Especializados en comercio internacional de productos del mar congelados.</p>
+                <p>Sirviendo a importadores en 40+ países con 20+ años de experiencia.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Productos</h4>
+                <p><a href="calamar-gigante.html">Calamar Gigante</a></p>
+                <p><a href="calamar-illex.html">Calamar Illex</a></p>
+                <p><a href="pulpo.html">Pulpo</a></p>
+                <p><a href="pejerrey.html">Pejerrey</a></p>
+                <p><a href="jurel.html">Jurel</a></p>
+                <p><a href="caballa-pacifico.html">Caballa del Pacífico</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Industrias que Servimos</h4>
+                <p>Importadores de Productos del Mar</p>
+                <p>Empresas de Distribución</p>
+                <p>Plantas de Reprocesamiento</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: info@seafoodtrading.com</p>
+                <p>Tel: +51 1 2345 6789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Global Frozen Seafood Trading. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

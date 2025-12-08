@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Frozen Seafood Trading | Premium Logistics Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A4D68;
+            --primary-dark: #052C3D;
+            --accent: #E85D04;
+            --accent-light: #F77F00;
+            --neutral-dark: #1A1A1A;
+            --neutral-medium: #4A4A4A;
+            --neutral-light: #F5F5F5;
+            --white: #FFFFFF;
+            --gradient-ocean: linear-gradient(135deg, #0A4D68 0%, #088395 50%, #05BFDB 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.2rem 5%;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 5%;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--neutral-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-nav {
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.7rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
+        }
+
+        .cta-nav:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            /* background: var(--gradient-ocean); */
+            background: #FF0000;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .hero-slide {
+            position: relative;
+            overflow: hidden;
+            height: calc(100vh - 80px);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+            transition: all 0.5s ease;
+        }
+
+        .hero-slide:hover::before {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+        }
+
+        .hero-slide:hover {
+            transform: scale(1.02);
+        }
+
+        .hero-slide:nth-child(1) {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="ocean1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%230A4D68"/><stop offset="100%" style="stop-color:%23088395"/></linearGradient></defs><rect fill="url(%23ocean1)" width="800" height="600"/><path fill="rgba(255,255,255,0.1)" d="M0,200 Q200,150 400,200 T800,200 L800,600 L0,600 Z"/></svg>');
+        }
+
+        .hero-slide:nth-child(2) {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="ocean2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23E85D04"/><stop offset="100%" style="stop-color:%23DC2F02"/></linearGradient></defs><rect fill="url(%23ocean2)" width="800" height="600"/><circle fill="rgba(255,255,255,0.2)" cx="400" cy="300" r="200"/></svg>');
+        }
+
+        .hero-slide:nth-child(3) {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="ocean3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23088395"/><stop offset="100%" style="stop-color:%2305BFDB"/></linearGradient></defs><rect fill="url(%23ocean3)" width="800" height="600"/><path fill="rgba(255,255,255,0.15)" d="M0,0 L800,0 L800,400 Q400,350 0,400 Z"/></svg>');
+        }
+
+        .hero-slide:nth-child(4) {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="ocean4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%230A4D68"/><stop offset="100%" style="stop-color:%23052C3D"/></linearGradient></defs><rect fill="url(%23ocean4)" width="800" height="600"/><rect fill="rgba(255,255,255,0.1)" x="100" y="100" width="600" height="400"/></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .btn-slide {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--white);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--white);
+        }
+
+        .btn-slide:hover {
+            background: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Banner Section */
+        .hero-banner {
+            background: var(--primary-dark);
+            padding: 6rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><path fill="rgba(255,255,255,0.03)" d="M0,200 Q300,100 600,200 T1200,200 L1200,400 L0,400 Z"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-banner-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-banner h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-banner .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .cta-primary:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(232, 93, 4, 0.3);
+        }
+
+        /* Value Proposition Section */
+        .value-section {
+            padding: 8rem 5%;
+            background: var(--neutral-light);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-header .accent-line {
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 1.5rem auto;
+        }
+
+        .value-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: var(--accent);
+            transition: height 0.4s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .value-card:hover::before {
+            height: 100%;
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-ocean);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: var(--neutral-medium);
+            line-height: 1.8;
+        }
+
+        /* Trust Indicators Section */
+        .trust-section {
+            background: var(--primary);
+            color: var(--white);
+            padding: 5rem 5%;
+        }
+
+        .trust-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .trust-item {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .trust-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 8rem 5%;
+            background: var(--white);
+        }
+
+        .products-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-tag {
+            background: var(--neutral-light);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 500;
+            color: var(--primary);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-tag:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient-ocean);
+            padding: 6rem 5%;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 15s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--white);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--white);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-secondary:hover {
+            background: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--neutral-dark);
+            color: var(--white);
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            line-height: 2;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-slide {
+                height: 50vh;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-banner h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .value-grid,
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-slide {
+                height: 40vh;
+            }
+
+            .hero-banner h1 {
+                font-size: 2rem;
+            }
+
+            .hero-banner .subtitle {
+                font-size: 1rem;
+            }
+
+            .trust-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Smooth Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">SEAFOOD GLOBAL</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto" class="cta-nav">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slides -->
+    <section class="hero" id="inicio">
+        <div class="hero-slide">
+            <div class="hero-content">
+                <h2>Compliance<br>Internacional</h2>
+                <p>Expertos en documentación y certificados</p>
+                <a href="#servicios" class="btn-slide">Más Información</a>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-content">
+                <h2>Red Global<br>de Proveedores</h2>
+                <p>Acceso a 300+ exportadores verificados</p>
+                <a href="#servicios" class="btn-slide">Descubrir</a>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-content">
+                <h2>Logística<br>Sin Fronteras</h2>
+                <p>Coordinación completa hasta su puerto</p>
+                <a href="#servicios" class="btn-slide">Ver Proceso</a>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-content">
+                <h2>Seguridad<br>Garantizada</h2>
+                <p>Protección total en cada transacción</p>
+                <a href="#contacto" class="btn-slide">Consultar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-banner-content">
+            <h1>Global Frozen Seafood Trading & Logistics Solutions</h1>
+            <p class="subtitle">Conectamos importadores de todo el mundo con productos del mar premium congelado a
+                través de nuestra red de 300+ proveedores y más de 20 años de experiencia en cumplimiento comercial
+                internacional y logística.</p>
+            <a href="#contacto" class="cta-primary">Solicitar Cotización</a>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="value-section" id="servicios">
+        <div class="section-header fade-in">
+            <h2>Por Qué Eligen Nuestros Servicios</h2>
+            <div class="accent-line"></div>
+        </div>
+        <div class="value-grid">
+            <div class="value-card fade-in">
+                <div class="value-icon">🔒</div>
+                <h3>Seguridad en la Cadena de Suministro</h3>
+                <p>Relaciones directas con 300+ exportadores verificados en América Latina y más allá. Contenedores
+                    completos de 40ft de productos del mar premium congelado con precios competitivos.</p>
+            </div>
+            <div class="value-card fade-in">
+                <div class="value-icon">✓</div>
+                <h3>Cumplimiento Comercial Completo</h3>
+                <p>Asesoramiento experto en documentación internacional. Coordinación de certificados de origen,
+                    sanitarios y de captura. Mitigación de riesgos y prevención de fraude en cada transacción.</p>
+            </div>
+            <div class="value-card fade-in">
+                <div class="value-icon">🌍</div>
+                <h3>Gestión Logística Integral</h3>
+                <p>Coordinación de punta a punta desde el proveedor hasta el puerto de destino. Servicio rápido y
+                    confiable en más de 40 países. Proceso de adquisición sin complicaciones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-number">20+</div>
+                <div class="trust-label">Años de Experiencia</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">300+</div>
+                <div class="trust-label">Proveedores Verificados</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">40+</div>
+                <div class="trust-label">Países Atendidos</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">100%</div>
+                <div class="trust-label">Garantía de Seguridad</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="productos">
+        <div class="section-header fade-in">
+            <h2>Nuestros Productos</h2>
+            <div class="accent-line"></div>
+            <p>Especialistas en contenedores completos (40ft) de productos del mar premium congelado</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-tag">Calamar Gigante</div>
+            <div class="product-tag">Calamar Illex</div>
+            <div class="product-tag">Pulpo</div>
+            <div class="product-tag">Pejerrey</div>
+            <div class="product-tag">Jurel</div>
+            <div class="product-tag">Caballa del Pacífico</div>
+            <div class="product-tag">Corvina Amarilla</div>
+            <div class="product-tag">Merluza</div>
+            <div class="product-tag">Mejillones</div>
+            <div class="product-tag">Y muchos más...</div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contacto">
+        <h2>¿Listo para Obtener su Próximo Contenedor?</h2>
+        <p>Obtenga cotizaciones competitivas y asesoramiento experto para sus necesidades de productos del mar congelado
+        </p>
+        <a href="mailto:contacto@seafoodglobal.com" class="cta-secondary">Contáctenos Hoy</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Seafood Global</h3>
+                <p>Especialistas en comercio internacional de productos del mar congelados, conectando importadores,
+                    distribuidores y plantas procesadoras con soluciones logísticas confiables.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <p><a href="#servicios">Sourcing & Procurement</a></p>
+                <p><a href="#servicios">Trade Compliance</a></p>
+                <p><a href="#servicios">Logistics Coordination</a></p>
+                <p><a href="#servicios">Transaction Security</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Productos</h3>
+                <p><a href="#productos">Calamar Gigante</a></p>
+                <p><a href="#productos">Pulpo</a></p>
+                <p><a href="#productos">Jurel</a></p>
+                <p><a href="#productos">Ver Todos</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Horario: Lun - Vie<br>8:00 AM - 6:00 PM (Lima, UTC-5)</p>
+                <p>Respuesta: 2-4 horas<br>(horario laboral)</p>
+                <p><a href="mailto:info@seafoodglobal.com">info@seafoodglobal.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seafood Global. Todos los derechos reservados. | Atendiendo importadores en más de 40 países.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
