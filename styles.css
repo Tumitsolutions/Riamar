@@ -22,22 +22,30 @@
 } */
 
 :root {
-    --primary-ocean: #0B5563;
-    --primary-deep: #083D49;
-    --accent-coral: #E74C3C;
-    --accent-orange: #E67E22;
+    --primary-ocean: #0061A0;
+    --primary-deep: #002F5B;
+    --accent-coral: #0061A0;
+    --accent-orange: #4c9dd3;
     --neutral-dark: #2C3E50;
     --neutral-medium: #566573;
     --neutral-light: #ECF0F1;
     --white: #FFFFFF;
     --gradient-ocean: linear-gradient(135deg, #0B5563 0%, #16A085 100%);
-    --gradient-warm: linear-gradient(135deg, #E74C3C 0%, #E67E22 100%);
+    /* --gradient-warm: linear-gradient(135deg, #E74C3C 0%, #E67E22 100%); */
+    --gradient-warm: linear-gradient(135deg, #0061A0 0%, #4c9dd3 100%);
 
-    --primary: #0A4D68;
+    /* --primary: #0A4D68;
     --primary-dark: #052C3D;
     --accent: #E85D04;
-    --accent-light: #F77F00;
+    --accent-light: #F77F00; */
+
+    --primary: #0061A0;
+    --primary-dark: #002F5B;
+    /* --accent: #E85D04;   002F5B */
+    --accent: #0061A0;
+    --accent-light: #4c9dd3;
 }
+
 
 /* ========== RESET Y BASE ========== */
 * {
