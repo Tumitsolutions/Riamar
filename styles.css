@@ -890,3 +890,13 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.btn-whatsapp{
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
